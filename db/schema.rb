@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_23_045001) do
+ActiveRecord::Schema.define(version: 2019_06_23_082909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.integer "company_cd"
+    t.integer "rr_cd"
+    t.string "company_name"
+    t.string "company_name_k"
+    t.string "company_name_h"
+    t.string "company_name_r"
+    t.text "company_url"
+    t.integer "company_type"
+    t.integer "e_status"
+    t.integer "e_sort"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
