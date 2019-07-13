@@ -8,9 +8,13 @@ class CreateLines < ActiveRecord::Migration[5.2]
       t.string :line_name_h
       t.string :line_color_c
       t.string :line_color_t
-      t.
+      t.string :ine_type
+      t.integer :lon
+      t.integer :lat
+      t.integer :zoom
+      t.integer :e_status
+      t.integer :e_sort
       t.timestamps
     end
   end
 end
-line_cd,company_cd,line_name,line_name_k,line_name_h,line_color_c,line_color_t,line_type,lon,lat,zoom,e_status,e_sort

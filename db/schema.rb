@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_23_082909) do
+ActiveRecord::Schema.define(version: 2019_06_23_084332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,24 @@ ActiveRecord::Schema.define(version: 2019_06_23_082909) do
     t.string "company_name_r"
     t.text "company_url"
     t.integer "company_type"
+    t.integer "e_status"
+    t.integer "e_sort"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lines", force: :cascade do |t|
+    t.integer "line_cd"
+    t.integer "company_cd"
+    t.string "line_name"
+    t.string "line_name_k"
+    t.string "line_name_h"
+    t.string "line_color_c"
+    t.string "line_color_t"
+    t.string "ine_type"
+    t.integer "lon"
+    t.integer "lat"
+    t.integer "zoom"
     t.integer "e_status"
     t.integer "e_sort"
     t.datetime "created_at", null: false
