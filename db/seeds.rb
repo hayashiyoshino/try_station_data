@@ -20,3 +20,21 @@ CSV.foreach('db/seeds/csvs/company.csv', headers: true) do |row|
     e_sort: row['e_sort']
     )
 end
+
+CSV.foreach('db/seeds/csvs/line.csv', headers: true) do |row|
+  Line.create(
+    line_cd: row['line_cd'],
+    company_cd: row['company_cd'],
+    line_name: row['line_name'],
+    line_name_k: row['line_name_k'],
+    line_name_h: row['line_name_h'],
+    line_color_c: row['line_color_c'],
+    line_color_t: row['line_color_t'],
+    ine_type: row['ine_type'],
+    lon: row['lon'],
+    lat: row['lat'],
+    zoom: row['zoom'],
+    e_status: row['e_status'],
+    e_sort: row['e_sort']
+    )
+end
