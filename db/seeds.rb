@@ -38,7 +38,7 @@ CSV.foreach('db/seeds/csvs/line.csv', headers: true) do |row|
     line_name_h: row['line_name_h'],
     line_color_c: row['line_color_c'],
     line_color_t: row['line_color_t'],
-    ine_type: row['ine_type'],
+    line_type: row['line_type'],
     lon: row['lon'],
     lat: row['lat'],
     zoom: row['zoom'],
@@ -46,3 +46,25 @@ CSV.foreach('db/seeds/csvs/line.csv', headers: true) do |row|
     e_sort: row['e_sort']
     )
 end
+
+CSV.foreach('db/seeds/csvs/line.csv', headers: true) do |row|
+  Line.create(
+    station_cd,station_g_cd,station_name,station_name_k,station_name_r,line_cd,pref_cd,post,add,lon,lat,open_ymd,close_ymd,e_status,e_sort
+    station_cd: row['station_cd'],
+    station_g_cd: row['station_g_cd'],
+    station_name: row['station_name'],
+    station_name_k: row['station_name_k'],
+    station_name_r: row['station_name_r'],
+    line_cd: row['line_cd'],
+    pref_cd: row['pref_cd'],
+    post: row['post'],
+    add: row['add'],
+    lon: row['lon'],
+    lat: row['lat'],
+    open_ymd: row['open_ymd'],
+    close_ymd: row['close_ymd'],
+    e_status: row['e_status'],
+    e_sort: row['e_sort']
+    )
+end
+
