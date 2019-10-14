@@ -21,6 +21,14 @@ CSV.foreach('db/seeds/csvs/company.csv', headers: true) do |row|
     )
 end
 
+CSV.foreach('db/seeds/csvs/join.csv', headers: true) do |row|
+  Join.create(
+    line_cd: row['line_cd'],
+    station_cd1: row['station_cd1'],
+    station_cd2: row['station_cd2']
+    )
+end
+
 CSV.foreach('db/seeds/csvs/line.csv', headers: true) do |row|
   Line.create(
     line_cd: row['line_cd'],
